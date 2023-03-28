@@ -1,0 +1,22 @@
+<p>bai-tap13 works!</p>
+<table border="1">
+    <tr>
+        <th>Ma san pham</th>
+        <th>Ten san pham</th>
+        <th>Gia san pham</th>
+        <th>Hinh anh</th>
+        <th>#</th>
+    </tr>
+    <tbody *ngFor="let p of products">
+        <tr>
+            <td>{{p.productId}}</td>
+            <td>{{p.productName}}</td>
+            <td>{{p.productPrice}}</td>
+            <td>
+                <img [src]="p.productImage" alt="product image" width="100px" height="100px">
+            </td>
+            <td>
+                <a style="cursor:pointer;" (click)="viewDetail(p)">Detail</a>
+            </td>
+        </tr>
+</table>

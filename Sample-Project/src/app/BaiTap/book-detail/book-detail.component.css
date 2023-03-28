@@ -1,0 +1,10 @@
+.example-card {
+    max-width: 400px;
+    padding: 10px;
+    background-color: rgb(255, 253, 251);
+}
+
+.example-header-image {
+    width: 50%;
+    height: 50%;
+}

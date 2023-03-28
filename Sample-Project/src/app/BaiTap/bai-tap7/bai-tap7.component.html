@@ -1,0 +1,17 @@
+<p>bai-tap7 works!</p>
+<button (click)="onClick($event)">Click me</button> Name:
+<input type="text" #myName/>
+<button (click)="onSubmit(myName.value)">Submit</button>
+<!--Expanded-->
+<div>
+    Input a:
+    <input type="number" [(ngModel)]="a" /> Input b:
+    <input type="number" [(ngModel)]="b" />
+</div>
+<div>
+    <button (click)="calculate('plus')">Plus</button>
+    <button (click)="calculate('minus')">Minus</button>
+    <button (click)="calculate('multiply')">Multiply</button>
+    <button (click)="calculate('divide')">Divide</button>
+    <p>Result: {{result}}</p>
+</div>

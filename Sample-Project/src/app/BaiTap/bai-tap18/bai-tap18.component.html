@@ -1,0 +1,24 @@
+<h2>Bai 18</h2>
+<table border="1">
+    <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Email</td>
+        <td>Age</td>
+        <td>Picture</td>
+    </tr>
+    <tbody *ngFor="let ct of customerTypes">
+        <tr>
+            <td colspan="5">{{ct.CustomerTypeName}}</td>
+        </tr>
+        <tr *ngFor="let c of ct.Customers">
+            <td>{{c.Id}}</td>
+            <td>{{c.Name}}</td>
+            <td>{{c.Email}}</td>
+            <td>{{c.Age}}</td>
+            <td>
+                <img src="{{c.Image}}" width="100" height="100">
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,23 @@
+<p>list-customer works!</p>
+<table border="1" [cellPadding]="10" [cellSpacing]="10">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Age</th>
+        <th>#</th>
+    </tr>
+    <tbody *ngFor="let c of customers">
+        <tr>
+            <td>{{c.Id}}</td>
+            <td>{{c.Name}}</td>
+            <td>{{c.Email}}</td>
+            <td>{{c.Age}}</td>
+            <td>
+                <img src="{{c.Image}}" width="100" height="100">
+            </td>
+        </tr>
+
+    </tbody>
+
+</table>

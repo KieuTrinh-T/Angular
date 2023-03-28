@@ -1,0 +1,25 @@
+<h2>Đăng nhập hệ thống</h2>
+<form [formGroup]="loginFormGroup">
+    <div>
+        <input type="email" id="email" class="form-control" placeholder="Email" formControlName="email" required="email" [(ngModel)]="info.email">
+        <input type="password" class="form-control" id="password" placeholder="Password" formControlName="password" [(ngModel)]="info.password">
+    </div>
+
+</form>
+<input type="checkbox" id="remember" [(ngModel)]="isSaved" [checked]="isSaved"> Remember me
+
+
+<div *ngIf="loginFormGroup.controls['email'].touched &&
+    loginFormGroup.controls['email'].invalid">
+    <small *ngIf="loginFormGroup.controls['email'].errors?.['required']">Email is required</small>
+    <small *ngIf="loginFormGroup.controls['email'].errors?.['email']">Email is invalid</small>
+</div>
+<div *ngIf="loginFormGroup.controls['password'].touched &&
+    loginFormGroup.controls['password'].invalid">
+    <small *ngIf="loginFormGroup.controls['password'].errors?.['required']">Password is required</small>
+
+    <small *ngIf="loginFormGroup.controls['password'].errors?.['minlength']">Password is invalid</small>
+</div>
+
+<button type="submit" [disabled]="loginFormGroup.invalid" (click)="onSubmit()">Đăng nhập</button>
+<div id="result" [style.visibillity]="info.email !='' ? 'visible': 'hidden'">{{info.email}} {{info.password}}</div>

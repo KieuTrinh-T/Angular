@@ -1,0 +1,27 @@
+<h2>Bakery</h2>
+<p>{{errMessage}}</p>
+<div>
+    <label>Nhập số sao</label>
+    <input [(ngModel)]="rating">
+    <button mat-raised-button (click)="getListBakeryByRating()">Lọc</button>
+</div>
+<div class="row">
+    <div class="col-3" *ngFor="let item of bakeryList">
+        <mat-card>
+            <mat-card-content>
+                <img src="assets/food-images/{{item.Image}}">
+            </mat-card-content>
+            <mat-card-title>{{item.Name}}</mat-card-title>
+            <mat-card-subtitle>{{item.Price}}</mat-card-subtitle>
+            <div class="sub-title">
+                <mat-card-subtitle class="rating">Đánh giá: {{item.Rating}}
+                    <mat-icon fontIcon="star"></mat-icon>
+                </mat-card-subtitle>
+                <mat-card-subtitle>HSD: {{item.ExpDate}}</mat-card-subtitle>
+            </div>
+
+            <mat-card-actions>
+                <button mat-raised-button>Add to cart</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>

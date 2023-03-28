@@ -1,0 +1,50 @@
+[{
+        "context": ["/exchange"],
+        "target": "https://www.dongabank.com.vn",
+        "secure": true,
+        "changeOrigin": true,
+        "logLevel": "debug"
+    }, {
+        "context": ["/products"],
+        "target": "https://fakestoreapi.com",
+        "secure": true,
+        "changeOrigin": true,
+        "logLevel": "debug"
+    },
+    {
+        "context": ["/v1/bpi/**"],
+        "target": "https://api.coindesk.com",
+        "secure": true,
+        "changeOrigin": true,
+        "logLevel": "debug"
+    },
+    {
+        "context": ["/entries"],
+        "target": "https://api.publicapis.org/",
+        "secure": true,
+        "changeOrigin": true,
+        "logLevel": "debug"
+    },
+    {
+        "context": ["/fashions/**"],
+        "target": "http://localhost:3002",
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug"
+
+    },
+    {
+        "context": ["/books/**"],
+        "target": "http://localhost:3000",
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug"
+    },
+    {
+        "context": ["/bakeries/**"],
+        "target": "http://localhost:3000",
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug"
+    }
+]

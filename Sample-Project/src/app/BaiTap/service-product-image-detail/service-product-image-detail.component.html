@@ -1,0 +1,20 @@
+<p>service-product-image-detail works!</p>
+<button (click)="goBack()">Back</button>
+<table>
+    <tr>
+        <td>ID:</td>
+        <td>{{selectedProduct.productId}}</td>
+    </tr>
+    <tr>
+        <td>Name:</td>
+        <td>{{selectedProduct.productName}}</td>
+    </tr>
+    <tr>
+        <td>Price:</td>
+        <td>{{selectedProduct.productPrice}}</td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <img [src]="selectedProduct.productImage" alt="product image" width="100px" height="100px">
+        </td>
+</table>

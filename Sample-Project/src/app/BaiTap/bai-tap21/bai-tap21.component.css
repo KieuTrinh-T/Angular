@@ -1,0 +1,38 @@
+#email,
+#password {
+    display: block;
+    margin-top: 10px;
+    width: 50%;
+    max-width: 300px;
+    border-radius: 5px;
+    height: 2rem;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+small {
+    color: red;
+}
+
+input::after,
+button {
+    display: block;
+}
+
+button {
+    margin-top: 10px;
+    width: 50%;
+    height: 2rem;
+    padding: 5px;
+    max-width: 300px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+    background-color: rgb(131, 183, 211);
+}
+
+#result {
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+}

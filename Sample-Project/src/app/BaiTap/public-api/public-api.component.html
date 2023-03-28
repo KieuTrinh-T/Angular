@@ -1,0 +1,25 @@
+<table>
+    <tr class="header">
+        <td>API</td>
+        <td>Description</td>
+        <td>Auth</td>
+        <td>HTTPS</td>
+        <td>Cors</td>
+        <td>Link</td>
+        <td>Category</td>
+    </tr>
+
+    <tbody *ngFor="let api of data">
+        <tr>
+            <td>{{api.API}}</td>
+            <td>{{api.Description}}</td>
+            <td>{{api.Auth}}</td>
+            <td>{{api.HTTPS}}</td>
+            <td>{{api.Cors}}</td>
+            <td>{{api.Link}}</td>
+            <td>{{api.Category}}</td>
+        </tr>
+
+    </tbody>
+
+</table>

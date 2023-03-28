@@ -1,0 +1,17 @@
+<p>book-detail works!</p>
+<div>
+    <p>{{errMessage}}</p>
+    Book Id: <input type="text" #bookId> <button (click)="searchBook(bookId.value)">Search</button>
+</div>
+
+<mat-card class="example-card" *ngIf="book.BookId">
+    <mat-card-header>
+        <mat-card-title>{{book.BookName}}</mat-card-title>
+        <mat-card-subtitle>Giá: {{book.Price}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="assets/{{book.Image}}" alt={{book.BookName}}>
+    <mat-card-actions>
+        <button mat-button>Buy</button>
+        <button mat-button>Add</button>
+    </mat-card-actions>
+</mat-card>

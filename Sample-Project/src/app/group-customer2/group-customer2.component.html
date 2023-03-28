@@ -1,0 +1,9 @@
+<p>group-customer2 works!</p>
+<ul *ngFor=" let ct of database">
+    <li>{{ct.CustomerTypeId}} - {{ct.CustomerTypeName}}</li>
+    <ul *ngFor="let c of ct.Customers">
+        <li> {{c.Id}} - {{c.Name}}</li>
+
+    </ul>
+
+</ul>

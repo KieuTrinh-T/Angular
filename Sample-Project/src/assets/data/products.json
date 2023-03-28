@@ -1,0 +1,4 @@
+[{ "ProductId": "p1", "ProductName": "Coca", "Price": 100, "Image": "assets/coca.png" },
+    { "ProductId": "p2", "ProductName": "Pepsi", "Price": 300, "Image": "assets/pepsi.png" },
+    { "ProductId": "p1", "ProductName": "Sting", "Price": 200, "Image": "assets/sting.png" }
+]

@@ -1,0 +1,20 @@
+<h3>{{errMessage}}</h3>
+<table>
+    <tr>
+        <td>Code</td>
+        <td>Symbol</td>
+        <td>Rate</td>
+        <td>Description</td>
+        <td>Rate Float</td>
+    </tr>
+    <tbody *ngFor="let c of data">
+        <tr>
+            <td>{{c.code}}</td>
+            <td>{{c.symbol}}</td>
+            <td>{{c.rate}}</td>
+            <td>{{c.description}}</td>
+            <td>{{c.rate_float}}</td>
+
+        </tr>
+    </tbody>
+</table>

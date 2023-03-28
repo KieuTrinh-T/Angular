@@ -1,0 +1,15 @@
+.result {
+    width: 50%;
+    color: brown;
+}
+
+option {
+    width: 10px;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+    width: 100%;
+    text-align: center;
+}

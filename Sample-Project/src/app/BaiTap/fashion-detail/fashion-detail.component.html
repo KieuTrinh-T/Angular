@@ -1,0 +1,14 @@
+<h2>Bài 58</h2>
+<div>
+    <label>Fashion ID</label>
+    <input [(ngModel)]="id">
+    <button (click)="getFashionDetail()">Search</button>
+
+</div>
+<mat-card *ngIf="fashion._id">
+    <mat-card-content>
+        <mat-card-header matCardTitle>{{fashion.fashion_subject}}</mat-card-header>
+        <img src="{{fashion.fashion_image}}">
+        <p>{{fashion.fashion_detail}}</p>
+    </mat-card-content>
+</mat-card>

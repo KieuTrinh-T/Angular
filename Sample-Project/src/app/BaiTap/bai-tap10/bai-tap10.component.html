@@ -1,0 +1,49 @@
+<p>bai-tap10 works!</p>
+<table border="1">
+    <tr>
+        <th colspan="2">Chuyển đổi dương lịch sang âm lịch</th>
+
+    </tr>
+    <tr>
+        <select id="day" name="day" [(ngModel)]="date">
+      <option *ngFor="let d of dateRange">{{d}}</option>
+
+      </select>
+        <select id="month" name="month" [(ngModel)]="month">
+          <option *ngFor="let m of monthRange">{{m}}</option>
+
+      </select>
+        <select id="year" name="year" [(ngModel)]="year">
+          <option *ngFor="let y of yearRange">{{y}}</option>
+
+
+      </select>
+        <button (click)="convertDate()">
+    Chuyển đổi
+  </button>
+    </tr>
+    <tr>
+        Âm lịch
+    </tr>
+    <tr>
+        <td>Thứ trong tuần</td>
+        <td class="result">{{solarDayStr}}</td>
+    </tr>
+    <tr>
+        <td>Ngày tháng năm âm</td>
+        <td class="result">{{lunarDay}}</td>
+    </tr>
+    <tr>
+        <td>Năm</td>
+        <td class="resultStr">{{lunarYearStr}}</td>
+    </tr>
+    <tr>
+        <td>Tháng</td>
+        <td class="result">{{lunarMonthStr}}</td>
+    </tr>
+    <tr>
+        <td>Ngày</td>
+        <td class="result">{{lunarDateStr}}</td>
+    </tr>
+
+</table>
