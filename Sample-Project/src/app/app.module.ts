@@ -49,6 +49,11 @@ import {MatCardModule} from '@angular/material/card';
 import { BookNewComponent } from './BaiTap/book-new/book-new.component';
 import { BakeryComponent } from './BaiTap/bakery/bakery.component';
 import {MatIconModule} from '@angular/material/icon';
+import { FashionNewComponent } from './BaiTap/fashion-new/fashion-new.component';
+import { FashionUpdateComponent } from './BaiTap/fashion-update/fashion-update.component';
+import { BaiTap66Component } from './BaiTap/bai-tap66/bai-tap66.component';
+import { BookUpdateComponent } from './BaiTap/book-update/book-update.component';
+import { BookDeleteComponent } from './BaiTap/book-delete/book-delete.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -84,7 +89,12 @@ import {MatIconModule} from '@angular/material/icon';
     BookApiComponent,
     BookDetailComponent,
     BookNewComponent,
-    BakeryComponent
+    BakeryComponent,
+    FashionNewComponent,
+    FashionUpdateComponent,
+    BaiTap66Component,
+    BookUpdateComponent,
+    BookDeleteComponent
   ],
   imports: [
     BrowserModule,

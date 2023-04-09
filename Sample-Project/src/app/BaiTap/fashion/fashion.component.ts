@@ -14,4 +14,13 @@ export class FashionComponent {
  error:(err)=>{this.errMessage=err}
  })
  }
+
+ deleteItem(id:string){
+  this._service.deleteFashion(id).subscribe({
+    next:(data)=>{this.fashions=data},
+    error:(err)=>{this.errMessage=err}
+  })
+  this.fashions=this.fashions.filter((item:any)=>item.id!=id)
+}
+
 }
