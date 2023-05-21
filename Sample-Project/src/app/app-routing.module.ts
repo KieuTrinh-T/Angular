@@ -18,6 +18,8 @@ import { FashionUpdateComponent } from './BaiTap/fashion-update/fashion-update.c
 import { BaiTap66Component } from './BaiTap/bai-tap66/bai-tap66.component';
 import { BookUpdateComponent } from './BaiTap/book-update/book-update.component';
 import { BookDeleteComponent } from './BaiTap/book-delete/book-delete.component';
+import { BaiTap67Component } from './BaiTap/bai-tap67/bai-tap67.component';
+import { CartComponent } from './BaiTap/cart/cart.component';
 
 const routes: Routes = [
   {path: "customer", component: CustomerComponent},
@@ -38,6 +40,10 @@ const routes: Routes = [
   {path:'exercise-list/fashion-new', component: FashionNewComponent },
   {path:'exercise-list/fashion-update', component: FashionUpdateComponent },
   {path:'exercise-list/cookie-login', component: BaiTap66Component },
+  {path:'exercise-list/cosmetic', component: BaiTap67Component },
+  {path:'exercise-list/cart', component: CartComponent },
+
+
 
 ];
 

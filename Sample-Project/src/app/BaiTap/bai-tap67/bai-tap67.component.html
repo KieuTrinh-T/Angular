@@ -1,0 +1,13 @@
+<h2>{{errMessage}}</h2>
+<button mat-flat-button [routerLink]="'/exercise-list/cart'"><mat-icon>shopping_cart</mat-icon><span>View Cart</span></button>
+<div class="row">
+    <div class="col-3" *ngFor="let p of data">
+        <mat-card>
+            <mat-card-content><img src="{{p.Thumb}}"></mat-card-content>
+            <mat-card-title>{{p.ProductName}}</mat-card-title>
+            <mat-card-subtitle>{{p.ProductPrice}}</mat-card-subtitle>
+            <button mat-flat-button (click)="addToCart(p)"><mat-icon>add shopping cart icon</mat-icon> Add to cart</button>
+        </mat-card>
+
+    </div>
+</div>

@@ -54,6 +54,8 @@ import { FashionUpdateComponent } from './BaiTap/fashion-update/fashion-update.c
 import { BaiTap66Component } from './BaiTap/bai-tap66/bai-tap66.component';
 import { BookUpdateComponent } from './BaiTap/book-update/book-update.component';
 import { BookDeleteComponent } from './BaiTap/book-delete/book-delete.component';
+import { BaiTap67Component } from './BaiTap/bai-tap67/bai-tap67.component';
+import { CartComponent } from './BaiTap/cart/cart.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -94,7 +96,9 @@ import { BookDeleteComponent } from './BaiTap/book-delete/book-delete.component'
     FashionUpdateComponent,
     BaiTap66Component,
     BookUpdateComponent,
-    BookDeleteComponent
+    BookDeleteComponent,
+    BaiTap67Component,
+    CartComponent
   ],
   imports: [
     BrowserModule,

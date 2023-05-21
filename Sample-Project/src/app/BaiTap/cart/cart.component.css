@@ -1,0 +1,24 @@
+table {
+    border: 1 solid;
+    padding: 2px;
+}
+
+table tr td {
+    border: 1px solid;
+}
+
+table tr th {
+    border: 1px solid;
+    font-weight: 700;
+    background-color: darkred;
+    color: #ffffff;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

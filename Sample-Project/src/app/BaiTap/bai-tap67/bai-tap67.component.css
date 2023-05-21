@@ -1,0 +1,38 @@
+* {
+    font-size: 16px;
+    padding: 10px;
+}
+
+mat-card {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid rgb(112, 10, 10);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(112, 10, 10);
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.sub-title {
+    color: rgb(112, 10, 10);
+    font-size: 16px;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+mat-icon {
+    margin-bottom: 20px;
+    width: 50px;
+}

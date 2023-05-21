@@ -8,6 +8,9 @@ app.use(morgan("combined"))
 var cookieParser = require('cookie-parser');
 app.use(cookieParser());
 
+var session = require('express-session');
+app.use(session({ secret: "Shh, its a secret!" }));
+
 const bodyParser = require("body-parser")
 app.use(bodyParser.json({ limit: '10mb' }));
 app.use(bodyParser.urlencoded({ extended: true, limit: '10mb' }));
@@ -40,6 +43,7 @@ client = new MongoClient("mongodb://127.0.0.1:27017");
 client.connect();
 database = client.db("FashionData");
 fashionCollection = database.collection("Fashion");
+cosmeticCollection = client.db("Cosmetic").collection("ProductList");
 
 app.post("/fashions", cors(), async(req, res) => {
     const result = await fashionCollection.insertOne(req.body);
@@ -74,6 +78,19 @@ app.delete("/fashions/:id", cors(), async(req, res) => {
     res.send(result[0])
 })
 
+
+// cosmetic
+app.get("/cosmetics", cors(), async(req, res) => {
+    const result = await cosmeticCollection.find({}).toArray();
+    res.send(result)
+})
+app.get("/cosmetics/:id", cors(), async(req, res) => {
+    var o_id = new ObjectId(req.params["id"]);
+    const result = await cosmeticCollection.find({ _id: o_id }).toArray();
+    res.send(result[0])
+})
+
+
 // cookie
 
 app.get("/create-cookie", cors(), (req, res) => {
@@ -106,4 +123,48 @@ app.get("/read-cookie", cors(), (req, res) => {
 app.get("/clear-cookie", cors(), (req, res) => {
     res.clearCookie("account")
     res.send("[account] Cookie is removed")
+})
+
+app.get("/contact", cors(), (req, res) => {
+    if (req.session.visited != null) {
+        req.session.visited++
+            res.send("You visited this page " + req.session.visited + " times")
+    } else {
+        req.session.visited = 1
+        res.send("Welcome to this page for the first time!")
+    }
+})
+
+app.post("/cart", cors(), (req, res) => {
+    product = req.body
+    if (req.session.carts == null)
+        req.session.carts = []
+    req.session.carts.push(product)
+    res.send(req.session.carts)
+})
+app.get("/cart", cors(), (req, res) => {
+    res.send(req.session.carts)
+})
+app.get("/cart/:id", cors(), (req, res) => {
+    if (req.session.carts != null) {
+        p = req.session.carts.find(x => x._id = req.body._id)
+        res.send(p)
+    } else
+        res.send(null)
+})
+app.delete("/cart/:id", cors(), (req, res) => {
+    if (req.session.carts != null) {
+        id = req.params["id"]
+        req.session.carts = req.session.carts.filter(x => x._id != id)
+        res.send(p)
+    }
+    res.send(req.session.carts)
+})
+app.put("/cart", cors(), (req, res) => {
+    if (req.session.carts != null) {
+        p = req.body
+        req.session.carts = req.session.carts.map(x => x.Product._id == p._id ? p : x.Product)
+        res.send(p)
+    }
+    res.send(req.session.carts)
 })
